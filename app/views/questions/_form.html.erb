@@ -1,0 +1,8 @@
+<%= form_for(@question) do |f| %>
+  <div class="form-group">
+    <%= f.label :Please_enter_a_question %>
+<br>
+    <%= f.text_area :question %>
+  </div>
+  <%= f.submit(:class => "btn btn-primary") %>
+<% end %>

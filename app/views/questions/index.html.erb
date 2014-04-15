@@ -1,0 +1,13 @@
+<h3>Questions:</h3>
+
+<ul>
+  <% @questions.each do |question| %>
+    <li><a href="/questions/<%= question.id %>"><%= question.question %></a></li>
+    <% end %>
+</ul>
+
+<p><%= link_to "Add a New Question", new_question_path, :class=> "btn btn-default" %></p>
+
+<br>
+<br>
+<!-- <p><a href="/questions">View All Questions</a></p>
