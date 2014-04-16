@@ -5,6 +5,20 @@
 
 <p>"This is where answers will go (ordered list, maybe with date stamps)"</p>
 <br>
+
+<p> <%= link_to "Answer Question", new_question_answer_path(@question),
+                          :class => "btn btn-default" %> </p>
+<br>
+<p><a href="/questions">View All Questions</a></p>
+
+
+
+
+
+
+
+
+
 <!-- <p> <%= link_to "Edit Question", edit_question_path(@question), :class => "btn btn-default" %> </p>
 
 <p> <%= link_to "Delete Question", question_path(@question),
@@ -12,8 +26,4 @@
                           :method => "delete" },
                           :class => "btn btn-danger" %> </p>
 <br>
- --><p> <%= link_to "Answer Question", question_path(@question),
-                          :method => "patch",
-                          :class => "btn btn-default" %> </p>
-<br>
-<p><a href="/questions">View All Questions</a></p>
+ -->

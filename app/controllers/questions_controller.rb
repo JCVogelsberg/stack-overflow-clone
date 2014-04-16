@@ -1,4 +1,6 @@
 class QuestionsController < ApplicationController
+  before_filter :authorize, only: [:edit, :update, :new]
+
   def new
     @question = Question.new
   end
@@ -45,7 +47,7 @@ class QuestionsController < ApplicationController
 
   private
   def question_params
-    params.require(:question).permit(:question, :user)
+    params.require(:question).permit(:question) #, :user)
   end
 
 end

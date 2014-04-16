@@ -8,7 +8,7 @@ gem 'coffee-rails'
 gem 'jquery-rails'
 gem 'turbolinks'
 gem 'factory_girl'
-
+gem 'bcrypt-ruby'
 
 group :development do
   gem 'better_errors'
@@ -20,7 +20,7 @@ end
 group :test, :development do
   gem 'rspec-rails'
   gem 'capybara'
-  gem 'bcrypt-ruby'
+  # gem 'protected_attributes'
 end
 
 group :test do

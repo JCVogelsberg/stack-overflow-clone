@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>StackOverflow</title>
+  <title>Slack Overflow</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<%= flash[:error] %>
+
+<%= flash[:alert] %>
 <%= flash[:notice] %>
 
+
 <div class="container">
+  <div class="user_header">
+    <% if current_user %>
+      Logged in as <%= current_user.email %><br>
+      <%= link_to "LOG OUT", logout_path %>
+    <% else %>
+      <%= link_to "SIGN UP", signup_path %> or
+      <%= link_to "LOG IN", login_path %>
+    <% end %>
+  </div>
+
 <h1><i>Slack Overflow</i></h1>
 <p>===========================
 <br>
@@ -22,3 +34,4 @@
 
 </body>
 </html>
+
